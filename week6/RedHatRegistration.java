@@ -43,7 +43,9 @@ public class RedHatRegistration extends ProjectsMethod {
 		driver.findElement(By.id("user.attributes.addressLine1")).sendKeys(address);
 		driver.findElement(By.id("user.attributes.addressPostalCode")).sendKeys(pincode);
 		driver.findElement(By.id("user.attributes.addressCityText")).sendKeys(city);
-		//WebElement select1 = driver.findElement(By.id("user.attributes.addressState"));
+		WebElement select1 = driver.findElement(By.id("user.attributes.addressState"));
+		Select opt1=new Select(select1);
+		opt1.selectByVisibleText("Tamil Nadu");
 		//driver.findElement(By.id("user.attributes.addressCountyText")).sendKeys("india");
 				
 	}
